@@ -16,6 +16,12 @@ version = "1.0.0"
 name = "nd"
 path = "src/main.rs"
 
+[profile.release]
+opt-level = 3
+codegen-units = 1
+strip = true
+lto = true
+
 [dependencies]
 ansi_term = "0.12.1"
 anyhow = "1.0.53"
